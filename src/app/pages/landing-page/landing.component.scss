@@ -3,7 +3,7 @@
 .container {
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 48px;
 
   .username-block {
     display: flex;
@@ -11,17 +11,17 @@
     width: 70%;
 
     label {
-      padding-bottom: 0.75rem;
+      padding-bottom: 12px;
     }
 
     input {
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
       padding: 6px 12px;
-      border-radius: 0.5rem;
+      border-radius: 8px;
     }
 
     input, label, button {
-      font-size: 1rem;
+      font-size: $font-size-normal;
     }
   }
 

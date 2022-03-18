@@ -9,12 +9,16 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { InfoDialogComponent } from './components/info-dialog/info-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     SearchPageComponent,
     BooksSearchComponent,
-    WishlistComponent],
+    WishlistComponent,
+    InfoDialogComponent
+  ],
   imports: [
     CommonModule,
     SearchRoutingModule,
@@ -22,7 +26,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     MatRadioModule,
     MatListModule,
     ScrollingModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    MatDialogModule
   ],
 })
 export class SearchModule {
