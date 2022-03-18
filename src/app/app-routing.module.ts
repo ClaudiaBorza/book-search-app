@@ -1,21 +1,21 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { LandingComponent } from './pages/landing-page/landing.component';
 
 const routes: Routes = [
   {
     path: 'landing-page',
-    component: LandingPageComponent,
+    component: LandingComponent,
     data: {title: 'Landing page'}
   },
   {
-    path: 'book-search',
-    loadChildren: () => import('./pages/search-page/book-search.module').then(m => m.BookSearchModule),
-    data: {title: 'global.menu.preorder.collectionArticles'}
+    path: 'books',
+    loadChildren: () => import('./pages/search-page/search.module').then(m => m.SearchModule),
+    data: {title: 'Search'}
   },
   {
     path: '**',
-    redirectTo: '/collection/presentation',
+    redirectTo: '/landing-page',
     pathMatch: 'full'
   }
 ];
