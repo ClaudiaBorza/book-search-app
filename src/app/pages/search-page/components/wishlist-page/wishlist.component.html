@@ -1,1 +1,29 @@
-<p>wishlist-page works!</p>
+<div class="wish-list-container">
+  <div class="title">
+    <div>Wishlist</div>
+    <button (click)="navigateToMainPage()">Main page</button>
+  </div>
+  <mat-list id="wishlist">
+    <mat-list-item *ngFor="let book of myWishlist">
+      <div class="my-list-book-card">
+        <div>
+          <img [src]="book.volumeInfo.imageLinks.smallThumbnail" alt="book-image">
+        </div>
+        <div>
+          <div>
+            <p><b>Title: </b> {{ book.volumeInfo.title }};</p>
+          </div>
+          <div>
+            <p><b>Authors: </b> {{ book.volumeInfo.title }}</p>
+          </div>
+
+        </div>
+        <div>
+          <button (click)="removeBookFromList(book)">
+            Remove
+          </button>
+        </div>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>

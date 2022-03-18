@@ -9,7 +9,7 @@ const routes: Routes = [
     data: {title: 'Landing page'}
   },
   {
-    path: 'books',
+    path: 'overview',
     loadChildren: () => import('./pages/search-page/search.module').then(m => m.SearchModule),
     data: {title: 'Search'}
   },

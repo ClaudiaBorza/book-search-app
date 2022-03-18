@@ -32,7 +32,7 @@ export class LandingComponent {
 
     setTimeout(() => {
       this._loadingSpinner.hide();
-      this._router.navigate(['/books']);
+      this._router.navigate(['/overview']);
     }, 3000);
   }
 }

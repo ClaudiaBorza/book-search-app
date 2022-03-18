@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { ISearchOptions, SEARCH_OPTIONS } from '../../search-interfaces';
+import { MatDialog } from '@angular/material/dialog';
+import { InfoDialogComponent } from '../info-dialog/info-dialog.component';
+import { LoadingSpinnerService } from '../../../../shared/components/loading-spinner/loading-spinner.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bs-search-page',
@@ -11,6 +15,11 @@ export class BooksSearchComponent {
   availableBooks: any[] = [];
   selectedOption = null;
   startIndex = 0;
+
+  constructor(public dialog: MatDialog,
+              private _router: Router,
+              private _loadingSpinner: LoadingSpinnerService) {
+  }
 
   selectSearchParam(option: any) {
     this.selectedOption = option.param;
@@ -32,6 +41,17 @@ export class BooksSearchComponent {
   }
 
   openDialogInfo(book: any) {
+    const dialogRef = this.dialog.open(InfoDialogComponent, {
+      width: '80vw',
+      data: book
+    });
 
+    dialogRef.afterClosed().subscribe((goToWishlist) => {
+      if (!goToWishlist) {
+        this._loadingSpinner.hide();
+        return;
+      }
+      this._router.navigateByUrl('/overview/wishlist', {});
+    });
   }
 }

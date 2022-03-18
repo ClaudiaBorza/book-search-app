@@ -8,10 +8,11 @@ body {
 
 button {
   border-radius: $radius;
-  border: 1px solid $ROYAL-NAVY-BLUE;
-  background-color: $TOMB-BLUE;
-  color: $WHITE;
+  border: 1px solid $ROYAL-NAVY-INDIGO;
+  background-color: $TOMB-INDIGO;
+  color: $BLACK;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
 button:disabled,

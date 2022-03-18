@@ -1,0 +1,37 @@
+<div class="book-card">
+  <div class="first-row">
+    <div class="image-container">
+      <img [src]="data.volumeInfo.imageLinks.smallThumbnail" alt="book-image">
+      <button (click)="addToWishList(data)">Add to Wishlist</button>
+    </div>
+    <div class="main-details">
+      <div>
+        <p><b>Title: </b> {{ data.volumeInfo.title }};</p>
+      </div>
+      <div>
+        <p><b>Authors: </b> {{ data.volumeInfo.title }}</p>
+      </div>
+      <div>
+        <p><b>Print type: </b> {{ data.volumeInfo.printType }}</p>
+      </div>
+      <div>
+        <p><b>Published date: </b> {{ data.volumeInfo.publishedDate }}</p>
+      </div>
+      <div>
+        <p><b>Price: </b>
+          <span *ngIf="data.saleInfo.retailPrice">{{ data.saleInfo.retailPrice.amount + ' ' + data.saleInfo.retailPrice.amount }}</span>
+          <span *ngIf="!data.saleInfo.retailPrice">Not for sale</span>
+        </p>
+      </div>
+      <div>
+        <a [href]="data.volumeInfo.previewLink">Book preview</a>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="data.volumeInfo.description">
+    <p><b>Description: </b> {{ data.volumeInfo.description }}</p>
+  </div>
+  <div class="row" *ngIf="data.searchInfo.textSnippet">
+    <p><b>Book snippet: </b> {{ data.searchInfo.textSnippet }}</p>
+  </div>
+</div>

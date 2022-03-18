@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BooksSearchComponent } from './components/books-search/books-search.component';
 import { WishlistComponent } from './components/wishlist-page/wishlist.component';
 import { SearchPageComponent } from './search-page.component';
+import { WishListResolver } from './wishlist-resolver.service';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
       {
         path: 'wishlist',
         component: WishlistComponent,
+       resolve: {defaultData: WishListResolver},
         data: {title: 'Wishlist'}
       },
       {
