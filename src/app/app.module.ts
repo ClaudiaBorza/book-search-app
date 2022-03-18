@@ -2,21 +2,32 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { LandingPageComponent } from './pages/landing-page/landing-page.component';
-import { BookSearchComponent } from './pages/search-page/book-search.component';
-import { WishlistPageComponent } from './pages/wishlist-page/wishlist-page.component';
+import { LandingComponent } from './pages/landing-page/landing.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { LoadingSpinnerModule } from './shared/components/loading-spinner/loading-spinner.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent,
-    BookSearchComponent,
-    WishlistPageComponent
+    LandingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    OverlayModule,
+    FontAwesomeModule,
+    LoadingSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

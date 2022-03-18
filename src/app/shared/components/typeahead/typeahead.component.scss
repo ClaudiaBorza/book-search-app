@@ -1,0 +1,36 @@
+@import "../../../../assets/style/main";
+
+.typeahead-search-container {
+  width: 100%;
+  padding-top: 15px;
+  position: relative;
+
+  #typeaheadSearch {
+    width: calc(80vw - 6px);
+    height: 38px;
+    line-height: 36px;
+    font-size: $font-size-normal;
+    color: $BLACK;
+    border: 1px solid $GHOST;
+    padding: 0 0 0 6px;
+    border-radius: $radius;
+  }
+
+  input:focus,
+  input:focus-visible {
+    outline: none !important;
+    border-color: $BLACK !important;
+  }
+  
+  i.fas.fa-times,
+  .fas.fa-spinner {
+    position: absolute;
+    right: 20px;
+    top: 26px;
+    font-size: $font-size-medium;
+  }
+
+  .fas.fa-spinner {
+    right: 40px;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="typeahead-search-container">
+  <input id="typeaheadSearch"
+         class="form-control"
+         placeholder="Search..."
+         [formControl]="searchInput">
+  <span *ngIf="isSearching" class="fas fa-spinner fa-spin spin"></span>
+  <i class="fas fa-times clear"
+     (click)="clearInput()"
+     *ngIf="searchInput.value !== '' && searchInput.value"></i>
+</div>

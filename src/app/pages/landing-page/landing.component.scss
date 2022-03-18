@@ -1,0 +1,32 @@
+@import "../../../assets/style/main";
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+
+  .username-block {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    label {
+      padding-bottom: 0.75rem;
+    }
+
+    input {
+      margin-bottom: 1rem;
+      padding: 6px 12px;
+      border-radius: 0.5rem;
+    }
+
+    input, label, button {
+      font-size: 1rem;
+    }
+  }
+
+  .is-web {
+    width: 33%;
+  }
+
+}

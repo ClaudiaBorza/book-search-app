@@ -1,0 +1,23 @@
+@import "colors";
+@import "variables";
+
+*,
+body {
+  font-family: 'Mukta', 'Helvetica', 'Arial', sans-serif;
+}
+
+button {
+  border-radius: $radius;
+  border: 1px solid $ROYAL-NAVY-BLUE;
+  background-color: $TOMB-BLUE;
+  color: $WHITE;
+  padding: 5px 10px;
+}
+
+button:disabled,
+button[disabled] {
+  border: 2px solid $BORDER_COLOR;
+  background-color: $WHITE-GREY;
+  color: $SQUANT;
+  cursor: not-allowed;
+}

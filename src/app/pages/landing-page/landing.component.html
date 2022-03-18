@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="username-block" [class.is-web]="isWeb">
+    <label for="username">Username</label>
+    <input type="text" id="username" required [formControl]="username">
+    <button [disabled]="username.invalid"
+            (click)="navigateToBooksPage()">Go to Books
+    </button>
+  </div>
+</div>
