@@ -28,10 +28,11 @@ export class LandingComponent {
 
   navigateToBooksPage() {
     this._loadingSpinner.show();
+    sessionStorage.setItem('userName', this.username.value);
 
     setTimeout(() => {
       this._loadingSpinner.hide();
       this._router.navigate(['/overview']);
-    }, 3000);
+    }, 2000);
   }
 }

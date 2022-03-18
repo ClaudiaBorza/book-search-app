@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./books-search.component.scss']
 })
 export class BooksSearchComponent {
+  user = sessionStorage.getItem('userName')
   searchOptions: ISearchOptions[] = SEARCH_OPTIONS;
   availableBooks: any[] = [];
   selectedOption = null;

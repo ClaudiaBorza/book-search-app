@@ -8,6 +8,11 @@
   align-content: center;
   align-items: center;
 
+  .search-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .mat-radio-button:not(:first-of-type) {
     margin-left: 10px !important;
   }

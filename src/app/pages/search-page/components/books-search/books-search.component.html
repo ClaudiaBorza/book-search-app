@@ -1,14 +1,17 @@
 <div class="search-page-container">
   <div class="search-page">
-    <mat-radio-group id="searchType">
-      <mat-radio-button *ngFor="let option of searchOptions"
-                        (click)="selectSearchParam(option)"
-                        [checked]="selectedOption === option.param"
-                        [value]="option.param"
-                        color="primary">
-        <label>{{ option.name }}</label>
-      </mat-radio-button>
-    </mat-radio-group>
+    <div class="search-header">
+      <mat-radio-group id="searchType">
+        <mat-radio-button *ngFor="let option of searchOptions"
+                          (click)="selectSearchParam(option)"
+                          [checked]="selectedOption === option.param"
+                          [value]="option.param"
+                          color="primary">
+          <label>{{ option.name }}</label>
+        </mat-radio-button>
+      </mat-radio-group>
+      <div><label>Hello {{ user }} ^_^</label></div>
+    </div>
     <bs-typeahead [printType]="selectedOption"
                   [startIndex]="startIndex"
                   (updateBookList)="updateList($event)"></bs-typeahead>

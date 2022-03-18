@@ -26,6 +26,6 @@ export class InfoDialogComponent {
     setTimeout(() => {
       this._searchService.addToLocalList(book);
       this.dialogRef.close(true);
-    }, 3000);
+    }, 2000);
   }
 }
