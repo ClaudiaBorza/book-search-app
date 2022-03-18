@@ -12,7 +12,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class LandingComponent {
   username = new FormControl(null);
-  showErrorMessage = false;
   isWeb = false;
 
   constructor(private _fb: FormBuilder,

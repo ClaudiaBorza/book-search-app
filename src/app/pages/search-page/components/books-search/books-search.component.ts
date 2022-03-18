@@ -32,8 +32,6 @@ export class BooksSearchComponent {
     } else {
       this.availableBooks = [...this.availableBooks, ...event.items];
     }
-    console.log(this.availableBooks);
-    console.log(event);
   }
 
   updateDynamicCustomersScroll() {

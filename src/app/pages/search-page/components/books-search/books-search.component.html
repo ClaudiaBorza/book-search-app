@@ -9,12 +9,9 @@
         <label>{{ option.name }}</label>
       </mat-radio-button>
     </mat-radio-group>
-
     <bs-typeahead [printType]="selectedOption"
                   [startIndex]="startIndex"
                   (updateBookList)="updateList($event)"></bs-typeahead>
-
-
     <div (scrolled)="updateDynamicCustomersScroll()"
          [infiniteScrollDistance]="2"
          [infiniteScrollThrottle]="50"

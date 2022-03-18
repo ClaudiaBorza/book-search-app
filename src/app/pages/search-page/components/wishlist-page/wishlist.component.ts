@@ -17,9 +17,7 @@ export class WishlistComponent {
               private _loadingSpinner: LoadingSpinnerService) {
     this.myWishlist = this._route.snapshot.data['defaultData'];
     this._loadingSpinner.hide();
-    console.log(this.myWishlist);
   }
-
 
   removeBookFromList(book: any) {
     this._searchService.removeFromLocalList(book.id);
