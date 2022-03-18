@@ -1,0 +1,25 @@
+@import "../../../../../assets/style/main";
+
+.first-row {
+  display: flex;
+  height: 50%;
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
+  }
+
+  button {
+    border-radius: 0;
+  }
+
+  a {
+    color: $ROYAL-NAVY-INDIGO;
+    font-weight: $bold;
+  }
+}
+
+.row {
+  margin-top: 1rem;
+}
